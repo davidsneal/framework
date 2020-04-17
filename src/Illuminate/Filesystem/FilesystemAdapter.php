@@ -358,10 +358,15 @@ class FilesystemAdapter implements CloudFilesystemContract
      *
      * @param  string  $from
      * @param  string  $to
+     * @param  string  $visibility
      * @return bool
      */
-    public function copy($from, $to)
+    public function copy($from, $to, $visibility = null)
     {
+        if ($visibility) {
+            return $this->driver->setVisibility($from, $this->parseVisibility($visibility));
+        }
+
         return $this->driver->copy($from, $to);
     }
 

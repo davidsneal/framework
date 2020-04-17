@@ -243,11 +243,12 @@ class Filesystem
      *
      * @param  string  $path
      * @param  string  $target
+     * @param  string  $visibility
      * @return bool
      */
-    public function copy($path, $target)
+    public function copy($path, $target, $visibility = null)
     {
-        return copy($path, $target);
+        return copy($path, $target, $visibility);
     }
 
     /**

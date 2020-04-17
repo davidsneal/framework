@@ -17,7 +17,7 @@ use Illuminate\Filesystem\Filesystem;
  * @method static bool prepend(string $path, string $data)
  * @method static bool append(string $path, string $data)
  * @method static bool delete(string|array $paths)
- * @method static bool copy(string $from, string $to)
+ * @method static bool copy(string $from, string $to, string $visibility = null)
  * @method static bool move(string $from, string $to)
  * @method static int size(string $path)
  * @method static int lastModified(string $path)
